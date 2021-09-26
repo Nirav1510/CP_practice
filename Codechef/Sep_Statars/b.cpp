@@ -2,18 +2,13 @@
 using namespace std;
 typedef long long int ll;
 
-void solve(){
-    ll n,p,x,y;
-    cin>>n>> p >> x >> y;
-    vector<int> v(n);
-    for(int i=0;i<n;i++){
-        cin>>v[i];
-    }
-    ll cx=0,cy=0;
-    for(int i=0;i<p;i++){
-        v[i]==0 ? cx++ : cy++;
-    }
-    cout<< cx*x+cy*y <<endl;
+void solve()
+{
+    ll p, a, b, c, x, y;
+    cin >> p >> a >> b >> c >> x >> y;
+    ll anar = b + x * a;
+    ll chakri = c + y * a;
+    cout << p / min(anar, chakri) << endl;
 }
 
 int main()
